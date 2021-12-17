@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
 
-  {%- include head.html -%}
+  {% include head.html %}
 
-  <body>
+<body class="home-template">
+  <div id="page" class="site">
 
-    {%- include views/header.html -%}
 
-    {%- include views/banner.html -%}
+    {% include header.html %}
 
-    {%- include extensions/hashlocate.html -%}
 
-    {%- include extensions/theme-toggle.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <div class="page-content">
       <div class="wrapper">
         {{ content }}
       </div>
-    </main>
+    </div>
 
-    {%- include views/footer.html -%}
+    {% include footer.html %}
+
+
+            <div class="overlay"></div>
+  </div><!-- #page -->  
+
+
+    <script id="dsq-count-scr" src="//lucasgatsas.disqus.com/count.js" async></script>
 
   </body>
+
 </html>
